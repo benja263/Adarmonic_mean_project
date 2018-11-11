@@ -1,0 +1,16 @@
+1) How LDA works
+
+https://medium.com/@lettier/how-does-lda-work-ill-explain-using-emoji-108abf40fa7d
+
+2) How to implement LDA, for generic text (they both have interesting commands)
+
+https://towardsdatascience.com/topic-modelling-in-python-with-nltk-and-gensim-4ef03213cd21
+https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24
+
+3) Suggestions for twitter LDA
+
+https://medium.com/@alexisperrier/topic-modeling-of-twitter-timelines-in-python-bb91fa90d98d
+
+4) Sources insights
+
+https://www.quora.com/What-are-some-good-papers-about-topic-modeling-for-short-texts-especially-for-Tweets

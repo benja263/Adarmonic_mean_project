@@ -1,1 +1,7 @@
 LIST ALL LIBRARIES REQUIRED AND IF NEEDED INSTALLATION PROCEDURES.
+
+Spacy:
+
+- install spacy library
+
+- if command spacy.load('en_core_web_sm') doesn't work try python -m spacy download en, this should let you run either the command spacy.load('en_core_web_sm') or spacy.load('en')
