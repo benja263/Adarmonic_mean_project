@@ -1,7 +1,8 @@
 import os
 from nltk.corpus import stopwords
 import string
-
+from nltk.stem import SnowballStemmer
+from nltk.stem.porter import *
 
 dir = os.path.dirname(__file__)
 DOWNLOADED_DICTIONARY_PATH = os.path.join(dir,'Test_Set_3802_Pairs.txt')
@@ -31,12 +32,13 @@ def clean(tweet):
     punctuations = punctuations.replace("'", "")
     table = str.maketrans('', '', punctuations)
     cleaned_tweet = ""
+    stemmer = SnowballStemmer('english')
     for word in words:
         if "http" not in word and word not in stop_words and not word.startswith('#') and not word.startswith('@'):
             lower_word = word.lower()
             lower_word = lower_word.translate(table)
             if lower_word.isalpha():
-                cleaned_tweet += lower_word + " "
+                cleaned_tweet += stemmer.stem(lower_word) + " "
     return correct_spell(cleaned_tweet)
 
 
@@ -54,4 +56,3 @@ def correct_spell(tweet):
             tweet[i] = downloaded_dictionary[tweet[i]]
     tweet = ' '.join(tweet)
     return tweet
-
