@@ -11,8 +11,8 @@ def access_folder(folder_name = 'data'):
     prj_folder = os.path.abspath(os.path.join(wk_dir, os.pardir))
     
     if folder_name != 'data':
-        return prj_folder + './' + folder_name + '/'
+        return prj_folder + '/' + folder_name + '/'
     else:
-        return prj_folder + './' + 'data' + '/'
+        return prj_folder + '/' + 'data' + '/'
     
     
