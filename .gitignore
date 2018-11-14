@@ -1859,3 +1859,12 @@ data/mallet-2.0.8/stoplists/fr.txt
 data/mallet-2.0.8/stoplists/jp.txt
 data/mallet-2.0.8/stoplists/README
 src/.DS_Store
+.DS_Store
+data/cleaned_tweets_by_authors.txt
+data/tweets_by_authors.txt
+test/.ipynb_checkpoints/benja_test-checkpoint.ipynb
+test/.ipynb_checkpoints/LDA_small_test-checkpoint.ipynb
+test/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+test/__pycache__/helpers.cpython-37.pyc
+test/__pycache__/LDA_helpers.cpython-37.pyc
+test/__pycache__/pre_process_text.cpython-37.pyc
