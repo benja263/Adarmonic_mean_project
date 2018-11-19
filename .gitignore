@@ -1868,6 +1868,7 @@ test/.ipynb_checkpoints/Untitled-checkpoint.ipynb
 test/__pycache__/helpers.cpython-37.pyc
 test/__pycache__/LDA_helpers.cpython-37.pyc
 test/__pycache__/pre_process_text.cpython-37.pyc
+*.zip
 generated/tweets_by_hashtag.txt
 generated/tweets_by_authors.txt
 generated/tweet_hash_df.pickle
