@@ -1869,3 +1869,25 @@ test/__pycache__/helpers.cpython-37.pyc
 test/__pycache__/LDA_helpers.cpython-37.pyc
 test/__pycache__/pre_process_text.cpython-37.pyc
 *.zip
+generated/tweets_by_hashtag.txt
+generated/tweets_by_authors.txt
+generated/tweet_hash_df.pickle
+generated/tweet_author_df.pickle
+generated/line_to_hash.pickle
+generated/line_to_author.pickle
+generated/lda_model.zip
+generated/lda_model.state.sstats.npy
+generated/lda_model.state
+generated/lda_model.id2word
+generated/lda_model.expElogbeta.npy
+generated/lda_model
+generated/hashtags.txt
+generated/hash_lda_model.zip
+generated/hash_lda_model.state.sstats.npy
+generated/hash_lda_model.state
+generated/hash_lda_model.id2word
+generated/hash_lda_model.expElogbeta.npy
+generated/hash_lda_model
+generated/cleaned_tweets_by_hashtag.txt
+generated/cleaned_tweets_by_authors.txt
+>>>>>>> 49839552496e80eec66ec4c72387429bde07e11a
