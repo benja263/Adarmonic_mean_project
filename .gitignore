@@ -1889,3 +1889,8 @@ generated/hash_lda_model.expElogbeta.npy
 generated/hash_lda_model
 generated/cleaned_tweets_by_hashtag.txt
 generated/cleaned_tweets_by_authors.txt
+test/__pycache__/timeline_helpers.cpython-36.pyc
+test/__pycache__/helpers.cpython-36.pyc
+test/.ipynb_checkpoints/timeline_analysis-checkpoint.ipynb
+test/.ipynb_checkpoints/map_analysis-checkpoint.ipynb
+test/__pycache__/helpers.cpython-36.pyc

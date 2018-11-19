@@ -57,13 +57,26 @@ def trace_generator_account(account_df):
         filtered=count_accounttype(account, account_df)
         strd = pd.Series(filtered.index.strftime('%Y-%m-%d %H-%M-%S'))
         xlabels = list(strd.apply(lambda x: x[0:7]))
-        trace = dict(x=xlabels,
-                     y=filtered.account_num.values,
-                     mode= 'lines',
-                     stackgroup='one',
-                     groupnorm='percent',
-                     name=account)
-        data.append(trace)
+        if account == 'LeftTroll' or account == 'RightTroll':
+            
+            trace = dict(x=xlabels,
+                         y=filtered.account_num.values,
+                         mode= 'lines',
+                         stackgroup='one',
+                         groupnorm='percent',
+                         name=account)
+            data.append(trace)
+        else:
+            trace = dict(x=xlabels,
+                         y=filtered.account_num.values,
+                         mode= 'lines',
+                         stackgroup='one',
+                         groupnorm='percent',
+                         visible = 'legendonly',
+                         name=account)
+            data.append(trace)
+        
+        
 
     return data
 
@@ -99,3 +112,13 @@ def do_layout(xlabel, ylabel, title):
                 color='#7f7f7f')))
 
     return layout
+
+#----------------------------------------------
+
+
+def extract_states(state, dataframe_tweets):
+    """state should be an upper case string"""
+    names = state.lower()+'|'+state
+    df = dataframe_tweets[dataframe_tweets.content.str.contains(names)][['publish_date','language']]
+    df['num'] = df.language.map({'English':1})
+    return df.groupby(pd.Grouper(key='publish_date', freq='1M')).sum()
