@@ -23,11 +23,11 @@ Datasize and format should not be an issue. The decompressed file is less than 1
 
 ### Descriptive Statistics
 
-The categories and types of data were investigated by referencing the Clemenson report. There were found to be no missing values, other than a few rows in the category 'account_type' which will not be used in the analysis at is a more specific version of 'account_category'.
+The categories and types of data were investigated by referencing the Clemenson report. All columns were converted to their appropriate dtype. There were found to be no missing values, other than a few rows in the category 'account_type' which will not be used in the analysis at is a more specific version of 'account_category'.
 
 General statistics were calculated for the dataset and were visualized in boxplots and lineplots. All visualizations are created using the interactive library Plotly which can allow for clearer views of the data. 
 
-- Boxplots were created and categorized by account category, meaning if the tweet is considered a Left Troll, Right Troll, News Feed, Fear Monger, Commercial or Hashtag Gamer. 
+- The distribution of account followers by account_category was visualized using boxplots which revealed a bimodal distribution in RightTrolls and LeftTrolls. The reason for the bimodal distribution is still unclear. 
 - Line plots were created to visualize the quantities of tweets over time. It is clear that there is a strong peak around the time of November 2016, when the elections were held
 
 ### Enriching and Transforming the Data
