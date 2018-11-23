@@ -1928,10 +1928,7 @@ generated/new_model.id2word
 generated/new_model.state
 generated/no_grouping_tweets.txt
 generated/russian_tweets.txt
-models/full_model
-models/full_model.expElogbeta.npy
-models/full_model.id2word
-models/full_model.state
+
 cleaned_russian_tweets.txt
 cleaned_no_grouping_tweets.txt
 cleaned_iranian_tweets.txt
