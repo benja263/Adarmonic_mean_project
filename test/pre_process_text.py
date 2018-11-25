@@ -1,7 +1,7 @@
 import os
 from nltk.corpus import stopwords
 import string
-from nltk.stem import SnowballStemmer
+from nltk.stem import WordNetLemmatizer
 from nltk.stem.porter import *
 
 dir = os.path.dirname(__file__)
@@ -26,19 +26,21 @@ def clean(tweet):
     """
     #Separates the contractions and the punctuation
     stop_words = set(stopwords.words('english'))
+    # stop_words.update(set(['via','look', 'call', 'say', 'like', 'want', 'get', 'one', 'amp', 'trump']))
     words = tweet.split(" ")
     punctuations = string.punctuation
     punctuations = punctuations.replace("-", "")
     punctuations = punctuations.replace("'", "")
     table = str.maketrans('', '', punctuations)
+    wordnet_lemmatizer = WordNetLemmatizer()
     cleaned_tweet = ""
-    stemmer = SnowballStemmer('english')
     for word in words:
-        if "http" not in word and word not in stop_words and not word.startswith('#') and not word.startswith('@'):
-            lower_word = word.lower()
-            lower_word = lower_word.translate(table)
-            if lower_word.isalpha():
-                cleaned_tweet += stemmer.stem(lower_word) + " "
+        word = word.translate(table)
+        lower_word = word.lower()
+        lower_word = wordnet_lemmatizer.lemmatize(lower_word)
+        if "http" not in lower_word and lower_word not in stop_words and not lower_word.startswith('#') and not lower_word.startswith('@') \
+                and lower_word.isalpha() and len(lower_word) > 2:
+            cleaned_tweet += lower_word + " "
     return correct_spell(cleaned_tweet)
 
 
