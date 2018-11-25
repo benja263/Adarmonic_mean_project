@@ -17,6 +17,8 @@ The datasets we will use are two IRA tweet datasets. We will supplement it with 
 
 One of the IRA tweet dataset comprises a number of columns, including but not limited to, author ID, author, content (the tweet itself), region, language, date, following and account type, while the second data set includes other features we would like to incorporate such as an account's creation date and the number of likes for a given tweet. We expect the types of accounts to differ in activity and subject matter depening on the timeframe. We will attempt to correlate this activity to the current events at the time. 
 
+Since the second dataset has been released late, we will integrate its data into our pipeline for the next milestone.
+
 Datasize and format should not be an issue. The decompressed file is less than 1 GB in .csv format. 
 
 # Pipeline
@@ -32,12 +34,15 @@ The categories and types of data were investigated by referencing the Clemenson 
 
 One of the objectives is to gain a better understanding of the strategies of the Russian Trolls. The subject matter of tweets and targetted audience may be useful for this endeavor. Some different filtering methods will be applied to extract the topic of a given tweet as well as its target audience.
 
-- One filtering method that is applied is to select tweets based on the State that is mentioned. This would provide us with a summary of tweets that targetted specific States. This is of particular interest because some States are more important than others in the election - these are known as the 'Swing States' as they are not strongly democratic or republican, but rather have a tendency to 'swing' from one side to another, contributing to their importance in the final polls. It may be interesting to see if the IRA took such swing states into account when sending out tweets.
-- In order to do categorize the subject of a tweet, LDA, an unsupervised learning approach, is implemented. Tweets that share the same hashtag are concatenated together to create a form of 'document' which is then fed into the LDA algorithm after lemmatizing words and removing 'stop words'. Note that stop words are words which do not help distinguish topics, such as pronouns. The number of topics are a hyperparameter, along with other variables such as alpha. The final model can be visualized, and the subject matter of the topics are determined by examining the words that appear frequently in each topic. Note that the LDA model is still a work in progress as hyperparameters still have to be optimized to produce logical categories.
+- One filtering method that is applied is to select tweets based on the State (or city) that is mentioned. This would provide us with a summary of tweets that targetted specific States. This is of particular interest because some States are more important than others in the election - these are known as the 'Swing States' as they are not strongly democratic nor republican, but rather have a tendency to 'swing' from one side to another; of essential importance in the final polls. It may be interesting to see if the IRA took such swing states into account when sending out tweets.
+- In order to do categorize the subject of a tweet, LDA (Latent Dirichelet Allocation) analysis, an unsupervised learning approach, is implemented. Tweets that share the same hashtag are concatenated together to create a form of 'document' which is then fed into the LDA algorithm after lemmatizing words and removing 'stop words'. Note that stop words are words which do not help distinguish topics, such as pronouns. The number of topics are a hyperparameter, along with other variables such as alpha. The final model can be visualized, and the subject matter of the topics are determined by examining the words that appear frequently in each topic. Note that the LDA model is still a work in progress as hyperparameters still have to be optimized to produce logical categories.
 
 ### Future directives
 
 Objectives for milestone 3 include the following:
 
 - Train an LDA model sufficiently well in order to extract meaningful topics from a tweet. In this manner it will be possible to determine which subjects tended to increase a given author's follower count and thereby success.
-- Analyze whether there is a correlation with the targeted populations and the swing states. Compare this to the final election results
+- Analyze whether there is a correlation with the targeted populations and the swing states. Compare this to the final election results, it will be impossible to determine wheter these tweets actually influenced the elections but it could be insightful for the understanding of the different tactics played by the trolls.
+- Further investigate, with the integration of the second dataset, both the interplay between trolls and other trolls and the 
+interplay between trolls and other accounts (by means of hashtags).
+- If the analaysis performed will be able to identify specific 'targeting tactics' (e.g. topics treated, population targeted, event considered, specific people tagged, ecc..) that characterized the trolls, an interactive tweet analyzer could be built in order to test the potential or effectiveness of this tweet as a troll tweet (based on all the knowledge gained in the analysis of this dataset)
