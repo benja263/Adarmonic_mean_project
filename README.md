@@ -21,9 +21,9 @@ It is currently under investigation whether during the 2016 U.S. elections a Rus
 
 The datasets we will use are two IRA tweet datasets. We will supplement it with the final election results in different U.S. states as well as various politically related events that occured throughout the year 2016.
 
-One of the IRA tweet dataset comprises a number of columns, including but not limited to, author ID, author, content (the tweet itself), region, language, date, following and account type, while the second data set includes other features we would like to incorporate such as an account's creation date and the number of likes for a given tweet. We expect the types of accounts to differ in activity and subject matter depening on the timeframe. We will attempt to correlate this activity to the current events at the time. 
+One of the IRA tweet dataset [1] comprises a number of columns, including but not limited to, author ID, author, content (the tweet itself), region, language, date, following and account type, while the second data set includes other features we would like to incorporate such as an account's creation date and the number of likes for a given tweet. We expect the types of accounts to differ in activity and subject matter depening on the timeframe. We will attempt to correlate this activity to the current events at the time. 
 
-Since the second dataset has been released late, we will integrate its data into our pipeline for the next milestone.
+Since the second dataset [2] has been released recently, we will integrate its data into our pipeline for the next milestone.
 
 Datasize and format should not be an issue. The decompressed file is less than 1 GB in .csv format. 
 
@@ -41,7 +41,7 @@ The categories and types of data were investigated by referencing the Clemenson 
 One of the objectives is to gain a better understanding of the strategies of the Russian Trolls. The subject matter of tweets and targetted audience may be useful for this endeavor. Some different filtering methods will be applied to extract the topic of a given tweet as well as its target audience.
 
 - One filtering method that is applied is to select tweets based on the State (or city) that is mentioned. This would provide us with a summary of tweets that targetted specific States. This is of particular interest because some States are more important than others in the election - these are known as the 'Swing States' as they are not strongly democratic nor republican, but rather have a tendency to 'swing' from one side to another; of essential importance in the final polls. It may be interesting to see if the IRA took such swing states into account when sending out tweets.
-- In order to do categorize the subject of a tweet, LDA (Latent Dirichelet Allocation) analysis, an unsupervised learning approach, is implemented [1][2]. Tweets that share the same hashtag are concatenated together to create a form of 'document' which is then fed into the LDA algorithm after lemmatizing words and removing 'stop words'. Note that stop words are words which do not help distinguish topics, such as pronouns. The number of topics are a hyperparameter, along with other variables such as alpha. The final model can be visualized, and the subject matter of the topics are determined by examining the words that appear frequently in each topic. Note that the LDA model is still a work in progress as hyperparameters still have to be optimized to produce logical categories.
+- In order to do categorize the subject of a tweet, LDA (Latent Dirichelet Allocation) analysis, an unsupervised learning approach, is implemented [1],[2]. Tweets that share the same hashtag are concatenated together to create a form of 'document' which is then fed into the LDA algorithm after lemmatizing words and removing 'stop words'. Note that stop words are words which do not help distinguish topics, such as pronouns. The number of topics are a hyperparameter, along with other variables such as alpha. The final model can be visualized, and the subject matter of the topics are determined by examining the words that appear frequently in each topic. Note that the LDA model is still a work in progress as hyperparameters still have to be optimized to produce logical categories.
 
 ### Future directives
 
@@ -55,6 +55,10 @@ interplay between trolls and other accounts (by means of tags).
 
 ### References
 
-[1] Hong, Liangjie, and Brian D. Davison. "Empirical study of topic modeling in twitter." Proceedings of the first workshop on social media analytics. ACM, 2010.
+[1] Troll dataset #1: 
 
-[2] Steinskog, Asbjørn, Jonas Therkelsen, and Björn Gambäck. "Twitter Topic Modeling by Tweet Aggregation." Proceedings of the 21st Nordic Conference on Computational Linguistics. 2017.
+[2] Troll dataset #2: https://about.twitter.com/en_us/values/elections-integrity.html#data
+
+[3] Hong, Liangjie, and Brian D. Davison. "Empirical study of topic modeling in twitter." Proceedings of the first workshop on social media analytics. ACM, 2010.
+
+[4] Steinskog, Asbjørn, Jonas Therkelsen, and Björn Gambäck. "Twitter Topic Modeling by Tweet Aggregation." Proceedings of the 21st Nordic Conference on Computational Linguistics. 2017.
