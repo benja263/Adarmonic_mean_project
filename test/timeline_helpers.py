@@ -25,7 +25,7 @@ def trace_generator_language(lang_df):
     as input for the iplot function. It prepares the labels
     from the index"""
     data = []
-    for lang in lang_df.language.value_counts().index.values[0:10]:
+    for lang in lang_df.language.value_counts().index.values[0:13]:
         filtered=count_language(lang, lang_df)
         strd = pd.Series(filtered.index.strftime('%Y-%m-%d %H-%M-%S'))
         xlabels = list(strd.apply(lambda x: x[0:7]))
@@ -46,6 +46,15 @@ def count_accounttype(account, accounttype_time):
     filt = accounttype_time[accounttype_time.account_category == account].copy()
     filt['account_num'] = filt.account_category.map({account:1})
     return filt.groupby(pd.Grouper(key='publish_date', freq='1M')).sum()
+
+#----------------------------------------------
+
+def count_accounttype_dense(account, accounttype_time):
+    """Same thing as count_language. See above, except takes if __name__ == '__main__':
+    an account category string"""
+    filt = accounttype_time[accounttype_time.account_category == account].copy()
+    filt['account_num'] = filt.account_category.map({account:1})
+    return filt.groupby(pd.Grouper(key='publish_date', freq='1D')).sum()
 
 #----------------------------------------------
 
@@ -72,6 +81,35 @@ def trace_generator_account(account_df):
                          mode= 'lines',
                          stackgroup='one',
                          groupnorm='percent',
+                         visible = 'legendonly',
+                         name=account)
+            data.append(trace)
+        
+        
+
+    return data
+
+#----------------------------------------------
+
+def trace_generator_account_dense(account_df):
+    """Same thing as trace_generator_language except for account
+    category variable"""
+    data = []
+    for account in account_df.account_category.value_counts().index.values[0:10]:
+        filtered=count_accounttype_dense(account, account_df)
+        strd = pd.Series(filtered.index.strftime('%Y-%m-%d %H-%M-%S'))
+        xlabels = list(strd.apply(lambda x: x[0:11]))
+        if account == 'LeftTroll' or account == 'RightTroll':
+            
+            trace = dict(x=xlabels,
+                         y=filtered.account_num.values,
+                         mode= 'lines',
+                         name=account)
+            data.append(trace)
+        else:
+            trace = dict(x=xlabels,
+                         y=filtered.account_num.values,
+                         mode= 'lines',
                          visible = 'legendonly',
                          name=account)
             data.append(trace)
