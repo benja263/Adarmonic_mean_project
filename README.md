@@ -1,5 +1,12 @@
 # Are Russian Trolls Good at their Jobs? The 2016 U.S. Elections: A Timeline Analysis
 
+# Instructions to run the notebook (milestone 2)
+
+The notebook is located in: `src\descriptive_statistics`
+If you don't want to run the whole code but still be able to see the interactive plots, you just need to run the dedicated cells we provided along the notebook as the graphs are all stored online. You will need to have the library Plotly installed:
+
+``` $ pip install plotly ```
+
 # Abstract
 It is currently under investigation whether during the 2016 U.S. elections a Russian 'troll factory', the IRA, released a number of tweets from fraudulent Twitter accounts. These tweets potentially influenced the population of voters by spreading statements, some of which were fake. The aim of this project is to better understand the strategy of the trolls by retrieving the main subjects of these tweets over time and categorizing them according to their targeted social, geographical, or political group. Quantifing the potential impact of those tweets and providing a link to specific events that were occuring in the United States at the time are the objectives. 
 
@@ -9,7 +16,6 @@ It is currently under investigation whether during the 2016 U.S. elections a Rus
 - Frequencies and characteristics of tweets preceding or succeding electoral events, mainly focusing on swing states
 - What were the main topics of the fraudulent Twitter accounts over time
 - What was the most effective strategy for the trolls (quantified by increases in followers)
-- Is there a relation between the activities of trolls related to specific events and results of the elections
 
 # Dataset
 
@@ -44,5 +50,6 @@ Objectives for milestone 3 include the following:
 - Train an LDA model sufficiently well in order to extract meaningful topics from a tweet. In this manner it will be possible to determine which subjects tended to increase a given author's follower count and thereby success.
 - Analyze whether there is a correlation with the targeted populations and the swing states. Compare this to the final election results, it will be impossible to determine wheter these tweets actually influenced the elections but it could be insightful for the understanding of the different tactics played by the trolls.
 - Further investigate, with the integration of the second dataset, both the interplay between trolls and other trolls and the 
-interplay between trolls and other accounts (by means of hashtags).
-- If the analaysis performed will be able to identify specific 'targeting tactics' (e.g. topics treated, population targeted, event considered, specific people tagged, ecc..) that characterized the trolls, an interactive tweet analyzer could be built in order to test the potential or effectiveness of this tweet as a troll tweet (based on all the knowledge gained in the analysis of this dataset)
+interplay between trolls and other accounts (by means of tags).
+- If the analyses performed will be able to identify specific 'targeting tactics' (e.g. topics treated, population targeted, events considered, specific people tagged, etc.) that characterized the trolls, an interactive tweet analyzer could be built in order to test the effectiveness of any unseen tweet. 
+
