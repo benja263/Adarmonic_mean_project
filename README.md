@@ -2,7 +2,7 @@
 
 # Instructions to run the notebook (milestone 2)
 
-The notebook is located in: `src\descriptive_statistics`
+The notebook is located in: `src\Milestone2`
 If you don't want to run the whole code but still be able to see the interactive plots, you just need to run the dedicated cells we provided along the notebook as the graphs are all stored online. You will need to have the library Plotly installed:
 
 ``` $ pip install plotly ```
