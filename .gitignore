@@ -1895,3 +1895,8 @@ test/__pycache__/helpers.cpython-36.pyc
 test/.ipynb_checkpoints/timeline_analysis-checkpoint.ipynb
 test/.ipynb_checkpoints/map_analysis-checkpoint.ipynb
 test/__pycache__/helpers.cpython-36.pyc
+data/rus_troll_tweet_metadata.csv
+data/rus_troll_user.csv
+data/rus_troll_tweet_stats.csv
+data/rus_troll_tweet_stats.csv
+data/rus_troll_tweet_text.csv
