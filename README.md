@@ -21,9 +21,9 @@ It is currently under investigation whether during the 2016 U.S. elections a Rus
 
 The datasets we will use are two IRA tweet datasets. We will supplement it with the final election results in different U.S. states as well as various politically related events that occured throughout the year 2016.
 
-One of the IRA tweet dataset [1] comprises a number of columns, including but not limited to, author ID, author, content (the tweet itself), region, language, date, following and account type, while the second data set includes other features we would like to incorporate such as an account's creation date and the number of likes for a given tweet. We expect the types of accounts to differ in activity and subject matter depening on the timeframe. We will attempt to correlate this activity to the current events at the time. 
+One of the [IRA tweet datasets](https://www.kaggle.com/fivethirtyeight/russian-troll-tweets/home) [1] comprises a number of columns, including but not limited to, author ID, author, content (the tweet itself), region, language, date, following and account type, while the second data set includes other features we would like to incorporate such as an account's creation date and the number of likes for a given tweet. We expect the types of accounts to differ in activity and subject matter depening on the timeframe. We will attempt to correlate this activity to the current events at the time. 
 
-Since the second dataset [2] has been released recently, we will integrate its data into our pipeline for the next milestone.
+Since the [second dataset](https://about.twitter.com/en_us/values/elections-integrity.html#data) [2] has been released recently, we will integrate its data into our pipeline for the next milestone.
 
 Datasize and format should not be an issue. The decompressed file is less than 1 GB in .csv format. 
 
@@ -55,10 +55,6 @@ interplay between trolls and other accounts (by means of tags).
 
 ### References
 
-[1] Troll dataset #1: 
+[1] Hong, Liangjie, and Brian D. Davison. "Empirical study of topic modeling in twitter." Proceedings of the first workshop on social media analytics. ACM, 2010.
 
-[2] Troll dataset #2: https://about.twitter.com/en_us/values/elections-integrity.html#data
-
-[3] Hong, Liangjie, and Brian D. Davison. "Empirical study of topic modeling in twitter." Proceedings of the first workshop on social media analytics. ACM, 2010.
-
-[4] Steinskog, Asbjørn, Jonas Therkelsen, and Björn Gambäck. "Twitter Topic Modeling by Tweet Aggregation." Proceedings of the 21st Nordic Conference on Computational Linguistics. 2017.
+[2] Steinskog, Asbjørn, Jonas Therkelsen, and Björn Gambäck. "Twitter Topic Modeling by Tweet Aggregation." Proceedings of the 21st Nordic Conference on Computational Linguistics. 2017.
