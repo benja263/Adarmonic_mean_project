@@ -31,6 +31,7 @@ def clean(tweet):
     punctuations = string.punctuation
     punctuations = punctuations.replace("-", "")
     punctuations = punctuations.replace("'", "")
+    punctuations = punctuations.replace("#", "")
     table = str.maketrans('', '', punctuations)
     wordnet_lemmatizer = WordNetLemmatizer()
     cleaned_tweet = ""
