@@ -1931,3 +1931,8 @@ generated/russian_tweets.txt
 cleaned_russian_tweets.txt
 cleaned_no_grouping_tweets.txt
 cleaned_iranian_tweets.txt
+data/common-english-prep-conj.txt
+data/common-english-words.txt
+data/morestopwords.txt
+data/twitter-stopwords.txt
+test/__pycache__/helpers.cpython-36.pyc
