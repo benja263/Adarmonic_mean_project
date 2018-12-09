@@ -1951,3 +1951,13 @@ data/common-english-words.txt
 data/morestopwords.txt
 data/twitter-stopwords.txt
 test/__pycache__/helpers.cpython-36.pyc
+generated/benja.csv
+generated/benja.pkl
+generated/final_merged_tweets.csv
+generated/training_indices.npy
+test/.ipynb_checkpoints/benja_nn-checkpoint.ipynb
+test/.ipynb_checkpoints/New_dataset-checkpoint.ipynb
+test/__pycache__/helpers.cpython-36.pyc
+test/__pycache__/tokenize.cpython-36.pyc
+test/benja_lda.ipynb
+test/benja_nn.ipynb
