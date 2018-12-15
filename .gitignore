@@ -1965,3 +1965,9 @@ test/Untitled.ipynb
 test/Untitled1.ipynb
 test/Untitled2.ipynb
 generated/FINAL_DF_WITH_TOPICS.csv
+test/Final_dataset.csv
+test/__pycache__/helpers.cpython-36.pyc
+src/__pycache__/helpers.cpython-36.pyc
+*.pyc
+test/__pycache__/helpers.cpython-36.pyc
+test/__pycache__/helpers.cpython-36.pyc
