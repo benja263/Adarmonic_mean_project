@@ -33,11 +33,11 @@ Datasize and format should not be an issue. The decompressed file is less than 1
 
 
 # Contribution of Group Members
-Hannah Neural Network implementation, data cleaning, website.
+Hannah - data exploration, Neural Network implementation, data cleaning, website.
 
-Flavio data cleaning, devops for running on google colab, website.
+Flavio - data exploration, data cleaning, devops for running on google colab, website.
 
-Benjamin data exploration, data cleaning,  website, LDA classifier.
+Benjamin - data exploration, data cleaning,  website, LDA classifier.
 
 All group members will work on the presentation
 
